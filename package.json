@@ -1,12 +1,23 @@
 {
-  "name": "pharmacy-backend",
+  "name": "pharmacy-admin-backend",
   "version": "1.0.0",
+  "description": "Admin control panel API for online pharmacy",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "node index.js"
   },
+  "keywords": [
+    "pharmacy",
+    "admin",
+    "api"
+  ],
+  "author": "",
+  "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
-    "cors": "^2.8.5"
+    "multer": "^2.0.2"
   }
 }

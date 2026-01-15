@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة التحكم - صيدلية NEHAD</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="admin-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="logo">
+        <h2>صيدلية NEHAD</h2>
+        <p class="version">Admin v1.0</p>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active" data-section="dashboard">
+          📊 لوحة التحكم
+        </a>
+        <a href="#" class="nav-item" data-section="products">
+          📦 إدارة المنتجات
+        </a>
+        <a href="#" class="nav-item" data-section="offers">
+          🎯 إدارة العروض
+        </a>
+        <a href="#" class="nav-item" data-section="categories">
+          🏷️ إدارة الفئات
+        </a>
+        <a href="#" class="nav-item" data-section="orders">
+          📋 إدارة الطلبات
+        </a>
+        <a href="#" class="nav-item" data-section="pages">
+          📄 محتوى الصفحات
+        </a>
+        <a href="#" class="nav-item" data-section="settings">
+          ⚙️ الإعدادات
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+      <!-- Header -->
+      <header class="admin-header">
+        <h1>لوحة التحكم</h1>
+        <div class="header-info">
+          <span id="user-name">Admin</span>
+          <span class="timestamp" id="current-time"></span>
+        </div>
+      </header>
+
+      <!-- Dashboard Section -->
+      <section id="dashboard" class="section active">
+        <h2>نظرة عامة</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value" id="stat-products">0</div>
+            <div class="stat-label">المنتجات</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-orders">0</div>
+            <div class="stat-label">الطلبات</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-sales">0</div>
+            <div class="stat-label">المبيعات (جنيه)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-pending">0</div>
+            <div class="stat-label">طلبات معلقة</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Products Section -->
+      <section id="products" class="section">
+        <div class="section-header">
+          <h2>إدارة المنتجات</h2>
+          <button class="btn btn-primary" id="btn-add-product">+ إضافة منتج جديد</button>
+        </div>
+        <div id="products-list" class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>المعرف</th>
+                <th>الاسم</th>
+                <th>السعر</th>
+                <th>الخصم</th>
+                <th>الفئة</th>
+                <th>الإجراءات</th>
+              </tr>
+            </thead>
+            <tbody id="products-tbody">
+              <!-- Products will be loaded here -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Offers Section -->
+      <section id="offers" class="section">
+        <div class="section-header">
+          <h2>إدارة العروض</h2>
+          <button class="btn btn-primary" id="btn-add-offer">+ إضافة عرض</button>
+        </div>
+        <div id="offers-list" class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>معرف المنتج</th>
+                <th>الاسم</th>
+                <th>السعر الأصلي</th>
+                <th>الخصم (%)</th>
+                <th>السعر بعد الخصم</th>
+                <th>الإجراءات</th>
+              </tr>
+            </thead>
+            <tbody id="offers-tbody">
+              <!-- Offers will be loaded here -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Categories Section -->
+      <section id="categories" class="section">
+        <div class="section-header">
+          <h2>إدارة الفئات</h2>
+          <button class="btn btn-primary" id="btn-add-category">+ إضافة فئة جديدة</button>
+        </div>
+        <div id="categories-list" class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>الصورة</th>
+                <th>المعرف</th>
+                <th>الاسم</th>
+                <th>الوصف</th>
+                <th>الإجراءات</th>
+              </tr>
+            </thead>
+            <tbody id="categories-tbody">
+              <!-- Categories will be loaded here -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Orders Section -->
+      <section id="orders" class="section">
+        <div class="section-header">
+          <h2>إدارة الطلبات</h2>
+        </div>
+        <div id="orders-list" class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>معرف الطلب</th>
+                <th>الزبون</th>
+                <th>المجموع</th>
+                <th>الحالة</th>
+                <th>التاريخ</th>
+                <th>الإجراءات</th>
+              </tr>
+            </thead>
+            <tbody id="orders-tbody">
+              <!-- Orders will be loaded here -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Pages Section -->
+      <section id="pages" class="section">
+        <div class="section-header">
+          <h2>محتوى الصفحات والأقسام</h2>
+          <button class="btn btn-primary" id="btn-add-page">+ إضافة قسم جديد</button>
+        </div>
+        <div id="pages-list" class="pages-container">
+          <!-- Pages will be loaded here -->
+        </div>
+      </section>
+
+      <!-- Settings Section -->
+      <section id="settings" class="section">
+        <h2>إعدادات الموقع</h2>
+        <form id="settings-form" class="settings-form">
+          <div class="form-group">
+            <label>اسم المتجر</label>
+            <input type="text" id="setting-store-name" placeholder="اسم المتجر">
+          </div>
+          <div class="form-group">
+            <label>البريد الإلكتروني</label>
+            <input type="email" id="setting-email" placeholder="البريد الإلكتروني">
+          </div>
+          <div class="form-group">
+            <label>رقم الهاتف</label>
+            <input type="tel" id="setting-phone" placeholder="رقم الهاتف">
+          </div>
+          <div class="form-group">
+            <label>العنوان</label>
+            <input type="text" id="setting-address" placeholder="العنوان">
+          </div>
+          <div class="form-group">
+            <label>ساعات العمل</label>
+            <input type="text" id="setting-hours" placeholder="ساعات العمل">
+          </div>
+          <div class="form-group">
+            <label>العملة</label>
+            <input type="text" id="setting-currency" placeholder="العملة">
+          </div>
+          <div class="form-group">
+            <label>اللون الأساسي</label>
+            <input type="color" id="setting-primary-color">
+          </div>
+          <div class="form-group">
+            <label>اللون الثانوي</label>
+            <input type="color" id="setting-secondary-color">
+          </div>
+          <button type="submit" class="btn btn-primary">حفظ الإعدادات</button>
+        </form>
+      </section>
+
+      <!-- Ratings Section -->
+      <section id="ratings" class="section">
+        <div class="section-header">
+          <h2>إدارة التقييمات</h2>
+        </div>
+        <div id="ratings-list" class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>معرف المنتج</th>
+                <th>التقييم</th>
+                <th>التعليق</th>
+                <th>الإجراءات</th>
+              </tr>
+            </thead>
+            <tbody id="ratings-tbody">
+              <!-- Ratings will be loaded here -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal for Product/Category Forms -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h2 id="modal-title">نموذج</h2>
+      <form id="modal-form">
+        <div id="form-fields"></div>
+        <div class="modal-actions">
+          <button type="submit" class="btn btn-primary">حفظ</button>
+          <button type="button" class="btn btn-cancel" id="btn-cancel">إلغاء</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal for Order Details -->
+  <div id="order-modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="app.closeOrderModal()">&times;</span>
+      <h2>تفاصيل الطلب</h2>
+      <div id="order-details" style="overflow-y:auto;max-height:500px;padding:16px 0"></div>
+      <div id="order-modal-error" style="color:#c44;padding:12px;border:1px solid #c44;border-radius:6px;margin:12px 0;display:none"></div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-cancel" onclick="app.closeOrderModal()">إغلاق</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" style="position:fixed;top:20px;right:20px;z-index:9999"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
