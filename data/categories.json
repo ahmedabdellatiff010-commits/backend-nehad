@@ -1,0 +1,58 @@
+[
+  {
+    "id": "haircare",
+    "name": "العناية بالشعر",
+    "description": "شامبو وبلسم وزيوت للعناية بالشعر",
+    "image": "http://localhost:3000/uploads/Hair_Care-1768221967482.webp",
+    "createdAt": "2024-01-12T08:00:00Z"
+  },
+  {
+    "id": "personal",
+    "name": "العناية بالبشره",
+    "description": "العنايه الشخصيه للحريم",
+    "image": "http://localhost:3000/uploads/k-beauty-1768222209174.webp",
+    "createdAt": "2024-01-12T08:00:00Z"
+  },
+  {
+    "id": "kids",
+    "name": "منتجات الأطفال",
+    "description": "منتجات آمنة وخاصة بالأطفال",
+    "image": "http://localhost:3000/uploads/Untitled_design_34-1768222293451.webp",
+    "createdAt": "2024-01-12T08:00:00Z"
+  },
+  {
+    "id": "vitamins",
+    "name": "الفيتامينات والمكملات",
+    "description": "فيتامينات ومكملات غذائية",
+    "image": "http://localhost:3000/uploads/natures-bounty-womens-health-bg_ee7fa80b-ef27-4e9e-9347-382668c1f7d5-1768222415407.webp",
+    "createdAt": "2024-01-12T08:00:00Z"
+  },
+  {
+    "id": "makeup",
+    "name": "المكياج",
+    "description": "أساسات وأحمر شفاه ومنتجات مكياج",
+    "image": "http://localhost:3000/uploads/Hynt_6b_bbb699e3-968e-4a12-b5fc-c3f35a449575-1768222862198.webp",
+    "createdAt": "2024-01-12T08:00:00Z"
+  },
+  {
+    "id": "MEN CARE",
+    "name": "العنايه للرجال",
+    "description": "العنايه الشخصيه للرجال",
+    "image": "http://localhost:3000/uploads/top_5_products_blog-1768223398515.jpg",
+    "createdAt": "2026-01-12T13:09:58.521Z"
+  },
+  {
+    "id": "SPLASH",
+    "name": "سبلاش حريمي",
+    "description": "سبلاش حريمي",
+    "image": "http://localhost:3000/uploads/wkctq_512-1768223650011.webp",
+    "createdAt": "2026-01-12T13:14:10.016Z"
+  },
+  {
+    "id": "SUNSCREEN",
+    "name": "كريمات شمس",
+    "description": "كريمات للحمايه من اشاعه الشمس",
+    "image": "http://localhost:3000/uploads/images-1768223846756.jpeg",
+    "createdAt": "2026-01-12T13:17:26.765Z"
+  }
+]
